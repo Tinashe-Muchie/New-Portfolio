@@ -1,0 +1,92 @@
+import React, { ReactNode } from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
+import { FaBloggerB, FaCommentDots, FaHome, 
+  FaRegClipboard, FaRegStar, FaLinkedinIn, FaTwitter, FaGithub } from 'react-icons/fa';
+
+  type Props = {
+  children?: ReactNode
+  title?: string
+}
+
+const Layout = ({ children, title = 'This is the default title' }: Props) => (
+  <div>
+    <Head>
+      <title>{title}</title>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet" />
+    </Head>
+    <div className="container">
+    <header className='main-header'>
+      
+    </header>
+    <nav>
+      <ul className="main-nav">
+        <li className='nav-left'>
+        <Link href="/">
+          <a>  
+            <FaHome className='icon-home'/>
+            <span> Home </span>
+          </a>
+        </Link>
+        </li>
+        <li>
+        <Link href="/about">
+         <a> 
+           <FaRegStar className='icons'/>
+           <span> About </span>
+          </a>
+        </Link>
+        </li>
+        <li>
+        <Link href="/projects">
+          <a> 
+            <FaRegClipboard className='icons'/>
+            <span> Projects </span>
+          </a>
+        </Link>
+        </li>
+        <li>
+        <Link href="/blog">
+          <a>
+            <FaBloggerB className='icons'/>
+            <span> Blog </span>
+          </a>
+        </Link>
+        </li>
+        <li>
+        <Link href="/contact">
+          <a>
+            <FaCommentDots className='icons' />
+            <span> Contact </span>
+          </a>
+        </Link>
+        </li>
+      </ul>    
+    </nav>
+    {children}
+    <footer>
+        <ul className='social_media'>
+          <li>
+            <Link href="">
+              <a> <FaTwitter /></a>
+            </Link>
+          </li>
+          <li>
+            <Link href=''>
+              <a> <FaGithub /> </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="">
+              <a> <FaLinkedinIn /> </a>
+            </Link>
+          </li>
+        </ul>
+    </footer>
+    </div>
+  </div>
+)
+
+export default Layout

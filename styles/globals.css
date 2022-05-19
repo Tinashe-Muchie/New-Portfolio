@@ -1,16 +1,120 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+:root {
   box-sizing: border-box;
+  font-size: calc(1vw + 0.5em);
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Play, Arial, Helvetica, serif;
+  margin: 0;
+  background-color: #0b0c10;
+  background-repeat: no-repeat;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.container .main-nav {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  font-size: 1.3rem;
+  padding: 0.5em;
+  margin: 1em 0;
+}
+
+a:link {
+  color: #d1d7e0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:visited {
+  color: #802bb1;
+  font-weight: bolder;
+}
+
+a:hover {
+  color: #d1d7e0;
+}
+
+a:active {
+  color: #faed36ad;
+  border-bottom: 0.1em solid #faed36ad;
+}
+
+h2 {
+  color: #802bb1;
+}
+
+.icons {
+  height: 1em;
+  width: 1em;
+  vertical-align: -0.05em;
+  transition: transform 0.2s ease-out;
+}
+
+.main-nav > .nav-left {
+  display: none;
+}
+
+.main-nav a:hover > .icons,
+.main-nav a:focus > .icons {
+  transform: scale(1.2);
+}
+
+.social_media {
+  list-style-type: none;
+  display: flex;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .main-nav > .nav-left {
+    display: flex;
+    margin-right: auto;
+  }
+
+  .main-nav > li + li {
+    margin-left: 2.5em;
+  }
+
+  .container .main-nav {
+    background-image: transparent;
+    font-size: 0.9rem;
+  }
+
+  .container .main-nav a {
+    margin-bottom: 0.5em;
+  }
+
+  .main-nav a:hover > .icons,
+  .main-nav a:focus > .icons {
+    transform: scale(1.2);
+  }
+
+  .icons {
+    margin-right: 0.2em;
+  }
+
+  .icon-home {
+    margin-right: auto;
+  }
+
+  .main-nav a:hover > .icons,
+  .main-nav a:focus > .icons {
+    transform: scale(1.4);
+  }
 }
