@@ -4,7 +4,7 @@ import styles from "../styles/index.module.css";
 import { FaGithub, FaLinkedin, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
+  <Layout title="tinashemuchineripi">
     <main className={styles.container}>
       <div className={styles.wrapper}>
         <span className={styles.first_of_span}> Hi, my name is </span>
