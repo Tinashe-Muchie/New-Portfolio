@@ -18,6 +18,9 @@ type Props = {
   title?: string;
 };
 
+const date = new Date();
+const current_year = date.getFullYear();
+
 const Layout = ({ children, title = "This is the default title" }: Props) => (
   <div>
     <Head>
@@ -35,15 +38,15 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       </header>
       <nav>
         <ul className="main-nav">
-          <li className="nav-left">
+          <li className="home">
             <Link href="/">
               <a>
-                <FaHome className="icon-home" />
+                <FaHome className="icons" />
                 <span> Home </span>
               </a>
             </Link>
           </li>
-          <li>
+          <li className="nav-left">
             <Link href="/about">
               <a>
                 <FaRegStar className="icons" />
@@ -105,6 +108,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
             </Link>
           </li>
         </ul>
+        <div>&copy; Tinashe Muchineripi. {current_year}</div>
       </footer>
     </div>
   </div>

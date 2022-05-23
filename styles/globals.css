@@ -3,6 +3,12 @@
   font-size: calc(1vw + 0.5em);
   --background-black: #0b0c10;
   --background-white: #fff;
+  --grey-lynch: rgba(108, 122, 137);
+  --grey-cascade: rgba(149, 165, 166);
+  --grey-edward: rgba(171, 183, 183);
+  --orange-vivid: rgba(241, 90, 34);
+  --orange-burnt: rgba(211, 84, 0);
+  --orange-ecstasy: rgba(249, 105, 14);
 }
 
 *,
@@ -20,11 +26,14 @@ body {
     var(--background-white) 50%
   );
   background-repeat: no-repeat;
+  min-height: 100%;
 }
 
 .container {
   position: relative;
-  min-height: 100vh;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /*styling for the logo image*/
@@ -40,17 +49,27 @@ body {
   list-style-type: none;
   font-size: 1.3rem;
   padding: 0.5em;
-  margin: 1em 0;
+  margin: 0.5em 0;
 }
 
-a:link {
-  color: #d1d7e0;
+.container .main-nav li:nth-child(2) a:link,
+li:nth-child(3) a:link {
+  color: var(--background-white);
   text-decoration: none;
   text-transform: uppercase;
+  text-shadow: 0.1em 0em var(--grey-cascade);
+}
+
+.container .main-nav li:nth-child(4) a:link,
+li:nth-child(5) a:link {
+  color: var(--background-black);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 0.1em 0 var(--grey-cascade);
 }
 
 a:visited {
-  color: #802bb1;
+  color: var(--orange-burnt);
   font-weight: bolder;
 }
 
@@ -74,7 +93,7 @@ h2 {
   transition: transform 0.2s ease-out;
 }
 
-.main-nav > .nav-left {
+.main-nav > .home {
   display: none;
 }
 
@@ -86,18 +105,51 @@ h2 {
 .social_media {
   list-style-type: none;
   display: flex;
+  padding: 0.5em 1em 0;
+  margin: 0;
+}
+
+.social_media li {
+  margin: 0;
+  margin-right: 0.2em;
 }
 
 footer {
+  margin-top: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  flex-direction: column;
+  border-top: 0.01em solid var(--grey-cascade);
+}
+
+footer > div {
+  font-size: 0.7rem;
+  color: var(--background-white);
+  margin: 0;
+  padding: 0em 1em;
 }
 
 @media (min-width: 768px) {
+  .main-nav > .home {
+    display: flex;
+  }
+
   .main-nav > .nav-left {
     display: flex;
     margin-right: auto;
+  }
+
+  .container .main-nav li:nth-child(1) a:link,
+  li:nth-child(2) a:link {
+    color: var(--background-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 0.1em 0 var(--grey-cascade);
+  }
+
+  .container .main-nav li:nth-child(3) a:link {
+    color: var(--background-black);
   }
 
   .main-nav > li + li {
@@ -120,10 +172,6 @@ footer {
 
   .icons {
     margin-right: 0.2em;
-  }
-
-  .icon-home {
-    margin-right: auto;
   }
 
   .main-nav a:hover > .icons,
