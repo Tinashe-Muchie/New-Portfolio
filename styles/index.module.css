@@ -1,17 +1,29 @@
 .container {
+  --background-black: #0b0c10;
+  --background-white: #fff;
+  --grey-lynch: rgba(108, 122, 137);
+  --grey-cascade: rgba(149, 165, 166);
+  --grey-edward: rgba(171, 183, 183);
+  --orange-vivid: rgba(241, 90, 34);
+  --orange-burnt: rgba(211, 84, 0);
+  --orange-ecstasy: rgba(249, 105, 14);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 72vh;
   width: 90vw;
-  margin: 1em auto 0;
+  margin: 0 auto 0;
   font-size: 1.5rem;
-  color: #d1d7e0;
+  color: var(--grey-lynch);
   padding: 0.5em;
 }
 
 .container .wrapper {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container .first_of_span {
@@ -20,6 +32,7 @@
 }
 
 .container h2 {
+  color: var(--orange-burnt);
   font-size: 3rem;
   animation: appear 3s linear 1 0.5s;
   animation-fill-mode: backwards;
@@ -47,23 +60,24 @@
   display: block;
   width: 100%;
   font-size: 1.5rem;
-  color: #802bb1;
+  color: var(--orange-burnt);
   border-radius: 0.2em;
   text-transform: lowercase;
   font-weight: lighter;
-  border: 0.1em solid #802bb1;
+  border: 0.1em solid var(--orange-burnt);
   background-color: transparent;
   margin-top: 1.5em;
   animation: appear 3s linear 1 1.5s;
   animation-fill-mode: backwards;
   transition: all 0.5s linear;
+  box-shadow: 0.1em 0.3em var(--orange-vivid);
 }
 
 .container .primary:hover {
-  color: #d1d7e0;
+  color: var(--grey-cascade);
   border: 0.1em solid #d1d7e0;
   border-radius: 1em;
-  background-color: #802bb17c;
+  background-color: var(--orange-burnt);
 }
 
 @media (min-width: 768px) {
