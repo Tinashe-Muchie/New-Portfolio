@@ -20,11 +20,7 @@
 body {
   font-family: Play, Arial, Helvetica, serif;
   margin: 0;
-  background-image: linear-gradient(
-    90deg,
-    var(--background-black) 50%,
-    var(--background-white) 50%
-  );
+  background-color: var(--background-white);
   background-repeat: no-repeat;
   min-height: 100%;
 }
@@ -34,6 +30,19 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 72vh;
+  width: 90vw;
+  margin: 0 auto 0;
+  font-size: 1.5rem;
+  color: var(--background-black);
+  padding: 0.5em;
+  text-shadow: 0.06em 0 var(--grey-cascade);
 }
 
 /*styling for the logo image*/
@@ -125,7 +134,7 @@ footer {
 
 footer > div {
   font-size: 0.7rem;
-  color: var(--background-white);
+  color: var(--background-black);
   margin: 0;
   padding: 0em 1em;
 }
@@ -138,6 +147,10 @@ footer > div {
   .main-nav > .nav-left {
     display: flex;
     margin-right: auto;
+  }
+
+  main {
+    max-width: 80vw;
   }
 
   .container .main-nav li:nth-child(1) a:link,

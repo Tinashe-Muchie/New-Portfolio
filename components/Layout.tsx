@@ -80,7 +80,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
           </li>
         </ul>
       </nav>
-      {children}
+      <main>{children}</main>
       <footer>
         <ul className="social_media">
           <li>
