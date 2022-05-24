@@ -126,7 +126,7 @@ footer {
 footer > div {
   font-size: 0.7rem;
   color: var(--text-white);
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   padding: 0em 1em;
 }
 
@@ -144,16 +144,11 @@ footer > div {
     max-width: 80vw;
   }
 
-  .container .main-nav li:nth-child(1) a:link,
-  li:nth-child(2) a:link {
-    color: var(--background-white);
+  .container .main-nav li:nth-child(1) a:link {
+    color: var(--text-purple);
     text-decoration: none;
     text-transform: uppercase;
     text-shadow: 0.1em 0 var(--grey-cascade);
-  }
-
-  .container .main-nav li:nth-child(3) a:link {
-    color: var(--background-black);
   }
 
   .main-nav > li + li {

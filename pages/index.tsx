@@ -13,9 +13,18 @@ const IndexPage = () => (
         I enjoy building products that reside on the web, writing about products
         that reside on the web.
       </span>
-      <button className={styles.primary}>
-        Check out the latest blog post !
-      </button>
+      <ul className={styles.blog_cv_links}>
+        <li>
+          <Link href="/blog">
+            <a>Check out the latest blog post !</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog">
+            <a>Download CV</a>
+          </Link>
+        </li>
+      </ul>
     </div>
   </Layout>
 );

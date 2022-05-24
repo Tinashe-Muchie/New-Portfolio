@@ -84,7 +84,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       <footer>
         <ul className="social_media">
           <li>
-            <Link href="">
+            <Link href="/">
               <a>
                 {" "}
                 <FaTwitter />
@@ -92,7 +92,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="/">
               <a>
                 {" "}
                 <FaGithub />{" "}
@@ -100,7 +100,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="/">
               <a>
                 {" "}
                 <FaLinkedinIn />{" "}
