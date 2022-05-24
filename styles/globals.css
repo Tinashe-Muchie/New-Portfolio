@@ -1,14 +1,14 @@
 :root {
   box-sizing: border-box;
   font-size: calc(1vw + 0.5em);
-  --background-black: #0b0c10;
+  --background-black: rgba(0, 0, 0);
+  /*--background-black: #0b0c10;*/
   --background-white: #fff;
   --grey-lynch: rgba(108, 122, 137);
   --grey-cascade: rgba(149, 165, 166);
   --grey-edward: rgba(171, 183, 183);
-  --orange-vivid: rgba(241, 90, 34);
-  --orange-burnt: rgba(211, 84, 0);
-  --orange-ecstasy: rgba(249, 105, 14);
+  --text-purple: #802bb1;
+  --text-white: #d1d7e0;
 }
 
 *,
@@ -20,7 +20,7 @@
 body {
   font-family: Play, Arial, Helvetica, serif;
   margin: 0;
-  background-color: var(--background-white);
+  background-color: var(--background-black);
   background-repeat: no-repeat;
   min-height: 100%;
 }
@@ -50,6 +50,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  filter: drop-shadow(0 0 0.5em var(--text-purple));
 }
 
 .container .main-nav {
@@ -59,40 +60,30 @@ main {
   font-size: 1.3rem;
   padding: 0.5em;
   margin: 0.5em 0;
+  border-bottom: 0.1em solid var(--grey-cascade);
 }
 
 .container .main-nav li:nth-child(2) a:link,
-li:nth-child(3) a:link {
-  color: var(--background-white);
+li:nth-child(3) a:link,
+li:nth-child(4) a:link,
+li:nth-child(5) a:link {
+  color: var(--text-purple);
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 0.1em 0em var(--grey-cascade);
 }
 
-.container .main-nav li:nth-child(4) a:link,
-li:nth-child(5) a:link {
-  color: var(--background-black);
-  text-decoration: none;
-  text-transform: uppercase;
-  text-shadow: 0.1em 0 var(--grey-cascade);
-}
-
 a:visited {
-  color: var(--orange-burnt);
+  color: var(--text-purple);
   font-weight: bolder;
 }
 
 a:hover {
-  color: #d1d7e0;
-}
-
-a:active {
-  color: #faed36ad;
-  border-bottom: 0.1em solid #faed36ad;
+  color: var(--text-white);
 }
 
 h2 {
-  color: #802bb1;
+  color: var(text-purple);
 }
 
 .icons {
@@ -134,8 +125,8 @@ footer {
 
 footer > div {
   font-size: 0.7rem;
-  color: var(--background-black);
-  margin: 0;
+  color: var(--text-white);
+  margin-bottom: 0.5em;
   padding: 0em 1em;
 }
 
