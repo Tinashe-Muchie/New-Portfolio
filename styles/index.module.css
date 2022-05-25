@@ -36,7 +36,7 @@
 }
 
 .blog_cv_links {
-  padding: 0;
+  padding: 0em 0.5em;
   list-style-type: none;
   animation: appear 3s linear 1 1.5s;
   animation-fill-mode: backwards;
@@ -60,13 +60,15 @@
   border-radius: 0.2em;
   text-transform: lowercase;
   font-weight: lighter;
-  background-color: #802bb1;
+  background-color: transparent;
   margin-top: 1.5em;
-  box-shadow: 0.1em 0.1em 0 var(--grey-cascade);
+  box-shadow: 0em 0em 0.2em var(--grey-cascade);
+  transition: box-shadow 1s, color 1s;
 }
 
-.blog_cv_links a:hover {
+.blog_cv_links li a:hover {
   color: var(--grey-cascade);
+  box-shadow: 0 0.1em 0 var(--grey-cascade);
 }
 
 @media (min-width: 768px) {
@@ -88,10 +90,12 @@
     letter-spacing: 0.03em;
   }
 
-  .primary {
-    padding: 0.3em 1.5em;
-    display: block;
-    width: 40%;
+  .blog_cv_links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .blog_cv_links li a:link {
     font-size: 0.9rem;
   }
 }
