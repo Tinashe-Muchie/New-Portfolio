@@ -44,7 +44,6 @@
 }
 
 .blog_cv_links li {
-  margin-right: 5em;
   display: block;
   width: 100%;
   text-align: center;
@@ -52,9 +51,10 @@
 }
 
 .blog_cv_links li a:link {
-  text-decoration: none;
   display: block;
   width: 100%;
+  text-decoration: none;
+  padding: 0.3em 1.5em;
   font-size: 1.5rem;
   color: var(--grey-cascade);
   border-radius: 0.2em;
@@ -81,7 +81,6 @@
   .last_of_span {
     font-size: 1.1rem;
     font-weight: bold;
-    line-height: 0.3em;
     letter-spacing: 0.03em;
   }
 
@@ -92,10 +91,19 @@
 
   .blog_cv_links {
     display: flex;
+    justify-content: space-between;
+  }
+
+  .blog_cv_links li {
+    display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
+    margin-right: 0.5em;
   }
 
   .blog_cv_links li a:link {
+    display: flex;
+    flex-wrap: nowrap;
     font-size: 0.9rem;
   }
 }
