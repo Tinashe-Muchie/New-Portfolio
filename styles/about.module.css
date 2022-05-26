@@ -1,4 +1,6 @@
 .container {
+  display: flex;
+  flex-direction: column;
   min-height: 72vh;
   width: 90vw;
   margin: 1em auto 0;
@@ -6,7 +8,7 @@
   color: #d1d7e0;
   padding: 0.5em;
   overflow: hidden;
-}
+} 
 
 .container h2 {
   font-weight: lighter;
