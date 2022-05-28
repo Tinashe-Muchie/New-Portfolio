@@ -1,18 +1,23 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
 import styles from "../styles/contact.module.css";
+import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
+
+const submitContactForm = async (e: React.FormEvent) => {
+  e.preventDefault();
+};
 
 const ContactPage = () => (
   <Layout title="contact-page">
     <main className={styles.container}>
       <h2> Contact Me </h2>
       <form
-        className="contact_form"
+        className={styles.contact_form}
         id="contact_form"
         method="POST"
-        action="https://formsubmit.co/tinashemuchineripi@gmail.com"
+        onSubmit={submitContactForm}
       >
-        <div className="contact_form_items">
+        <div className={styles.contact_form_items}>
           <label htmlFor="firstName">First Name</label>
           <input
             type="text"
@@ -22,7 +27,7 @@ const ContactPage = () => (
             required
           />
         </div>
-        <div className="contact_form_items">
+        <div className={styles.contact_form_items}>
           <label htmlFor="lastName">Last Name</label>
           <input
             type="text"
@@ -32,7 +37,7 @@ const ContactPage = () => (
             required
           />
         </div>
-        <div className="contact_form_items">
+        <div className={styles.contact_form_items}>
           <label htmlFor="email">Email address</label>
           <input
             type="email"
@@ -42,16 +47,43 @@ const ContactPage = () => (
             required
           />
         </div>
-        <div className="contact_form_items">
+        <div className={styles.contact_form_items}>
           <label htmlFor="message">Message</label>
           <textarea id="message" name="message"></textarea>
         </div>
         <div>
           <button type="submit" value="Submit">
-            Submit
+            Send
           </button>
         </div>
       </form>
+      <span>You can also contact me via social media:</span>
+      <ul>
+        <li>
+          <Link href="/">
+            <a>
+              {" "}
+              <FaGithub />{" "}
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a>
+              {" "}
+              <FaLinkedinIn />{" "}
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a>
+              {" "}
+              <FaTwitter />{" "}
+            </a>
+          </Link>
+        </li>
+      </ul>
       <span>
         <Link href="/">
           <a>Go to Homepage</a>
