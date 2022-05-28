@@ -87,6 +87,7 @@
 
 .container span:last-of-type {
   font-size: 1.1rem;
+  margin-top: 1em;
 }
 
 @media (min-width: 768px) {
@@ -99,6 +100,10 @@
   }
 
   .container span:first-of-type {
+    font-size: 0.9rem;
+  }
+
+  .container span:last-of-type {
     font-size: 0.9rem;
   }
 }
